@@ -131,7 +131,7 @@ npm start
 
 \`\`\`bash
 docker build -t fiap-todo-api .
-docker run -p 3000:3000 fiap-todo-api
+docker run -p 3001:3001 fiap-todo-api
 \`\`\`
 
 Built with ❤️ for FIAP CI/CD Course

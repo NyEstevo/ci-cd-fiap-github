@@ -1,10 +1,16 @@
-name: 🚀 CI Completo
+name: 🚀 Aula 01 - CI Completo
 
 on:
   push:
     branches: [ main, develop ]
+    paths:
+      - 'fiap-dclt-aula01/**'
+      - '.github/workflows/aula01-ci-completo.yml' 
   pull_request:
     branches: [ main ]
+    paths:
+      - 'fiap-dclt-aula01/**'
+      - '.github/workflows/aula01-ci-completo.yml' 
   workflow_dispatch:
 
 env:

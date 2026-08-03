@@ -1,11 +1,14 @@
 # ============================================
 # WORKFLOW: CI Pipeline Multistage
 # ============================================
-name: 🔄 CI Multistage Pipeline
+name: 🔄 Aula 02 - CI Multistage Pipeline
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'fiap-dclt-aula02/**'
+      - '.github/workflows/aula02-ci-multistage.yml'
   workflow_dispatch:
 
 env:

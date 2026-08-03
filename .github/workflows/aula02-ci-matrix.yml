@@ -2,11 +2,14 @@
 # WORKFLOW: CI com Matrix Strategy
 # Executa testes em múltiplas versões do Node.js
 # ============================================
-name: 🔄 CI with Matrix
+name: 🔄 Aula 02 - CI with Matrix
 
 on:
-  # push:
-  #   branches: [ main ]
+  push:
+    branches: [ main ]
+    paths:
+      - 'fiap-dclt-aula02/**'
+      - '.github/workflows/aula02-ci-matrix.yml'
   workflow_dispatch:
 
 jobs:

@@ -1,11 +1,17 @@
-name: 🚀 CI Básico
+name: 🚀 Aula 01 - CI Básico
 
 # Quando executar este workflow
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'fiap-dclt-aula01/**'
+      - '.github/workflows/aula01-ci-basico.yml' 
   pull_request:
     branches: [ main ]
+    paths:
+      - 'fiap-dclt-aula01/**'
+      - '.github/workflows/aula01-ci-basico.yml'  # Executa apenas se houver alterações na pasta app
   workflow_dispatch:  # Permite execução manual
 
 jobs:

@@ -39,7 +39,7 @@ jobs:
       
       # Passo 4: Executar testes
       - name: 🧪 Executar testes
-        working-directory: fiap-dclt-aula01/  app
+        working-directory: fiap-dclt-aula01/app
         run: npm test
       
       # Passo 5: Executar lint (análise de código)

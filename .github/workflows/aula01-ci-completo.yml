@@ -31,14 +31,14 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-          cache-dependency-path: app/package-lock.json
+          cache-dependency-path: fiap-dclt-aula01/app/package-lock.json
       
       - name: 📦 Instalar dependências
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm ci
       
       - name: 🔍 Executar ESLint
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm run lint --if-present
         continue-on-error: true
   
@@ -57,21 +57,21 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-          cache-dependency-path: app/package-lock.json
+          cache-dependency-path: fiap-dclt-aula01/app/package-lock.json
       
       - name: 📦 Instalar dependências
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm ci
       
       - name: 🧪 Executar testes
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm test -- --coverage
       
       - name: 📊 Upload coverage
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: app/coverage/
+          path: fiap-dclt-aula01/app/coverage/
           retention-days: 7
   
   # Job 3: Build
@@ -89,14 +89,14 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
-          cache-dependency-path: app/package-lock.json
+          cache-dependency-path: fiap-dclt-aula01/app/package-lock.json
       
       - name: 📦 Instalar dependências
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm ci
       
       - name: 🏗️ Build aplicação
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: |
           echo "Building application..."
           # Aqui seria npm run build para apps React, etc

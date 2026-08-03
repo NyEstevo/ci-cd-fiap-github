@@ -21,6 +21,7 @@ jobs:
     uses: ./.github/workflows/aula02-reusable-test.yml
     with:
       node-version: '18'
+      working-directory: fiap-dclt-aula02/app
   
   # ============================================
   # Chamar workflow reutilizável com Node 20
@@ -30,6 +31,7 @@ jobs:
     uses: ./.github/workflows/aula02-reusable-test.yml
     with:
       node-version: '20'
+      working-directory: fiap-dclt-aula02/app
   
   # ============================================
   # Deploy só após todos os testes passarem

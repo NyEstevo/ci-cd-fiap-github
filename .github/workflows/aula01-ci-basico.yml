@@ -30,19 +30,19 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: app/package-lock.json
+          cache-dependency-path: fiap-dclt-aula01/app/package-lock.json
       
       # Passo 3: Instalar dependências
       - name: 📦 Instalar dependências
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm ci
       
       # Passo 4: Executar testes
       - name: 🧪 Executar testes
-        working-directory: app
+        working-directory: fiap-dclt-aula01/  app
         run: npm test
       
       # Passo 5: Executar lint (análise de código)
       - name: 🔍 Lint
-        working-directory: app
+        working-directory: fiap-dclt-aula01/app
         run: npm run lint --if-present

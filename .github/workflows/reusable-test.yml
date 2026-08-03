@@ -2,7 +2,7 @@
 # REUSABLE WORKFLOW: Test
 # Pode ser chamado por outros workflows
 # ============================================
-name: 🔄 Aula 02 - Reusable Test
+name: 🔄 Reusable Test
 
 # ============================================
 # WORKFLOW_CALL: Torna este workflow reutilizável

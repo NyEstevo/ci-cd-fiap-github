@@ -10,6 +10,7 @@ on:
     paths:
       - 'fiap-dclt-aula02/**'
       - '.github/workflows/aula02-ci-reusable.yml'
+      - '.github/workflows/reusable-test.yml'
   workflow_dispatch:
 
 jobs:
@@ -18,20 +19,18 @@ jobs:
   # ============================================
   test-node-18:
     name: 🧪 Test Node 18
-    uses: ./.github/workflows/aula02-reusable-test.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       node-version: '18'
-      working-directory: fiap-dclt-aula02/app
   
   # ============================================
   # Chamar workflow reutilizável com Node 20
   # ============================================
   test-node-20:
     name: 🧪 Test Node 20
-    uses: ./.github/workflows/aula02-reusable-test.yml
+    uses: ./.github/workflows/reusable-test.yml
     with:
       node-version: '20'
-      working-directory: fiap-dclt-aula02/app
   
   # ============================================
   # Deploy só após todos os testes passarem

@@ -59,7 +59,7 @@ spec:
         stage('📦 Dependencies') {
             steps {
                 container('node') {
-                    dir('app') {
+                    dir('fiap-dclt-aula01/app') {
                         echo '📦 Instalando dependências...'
                         sh '''
                             npm ci
@@ -75,7 +75,7 @@ spec:
                 stage('Unit Tests') {
                     steps {
                         container('node') {
-                            dir('app') {
+                            dir('fiap-dclt-aula01/app') {
                                 echo '🧪 Executando testes unitários...'
                                 sh '''
                                     npm test
@@ -88,7 +88,7 @@ spec:
                 stage('Coverage') {
                     steps {
                         container('node') {
-                            dir('app') {
+                            dir('fiap-dclt-aula01/app') {
                                 echo '📊 Gerando relatório de cobertura...'
                                 sh '''
                                     npm run test:coverage
@@ -104,7 +104,7 @@ spec:
         stage('🔒 Security') {
             steps {
                 container('node') {
-                    dir('app') {
+                    dir('fiap-dclt-aula01/app') {
                         echo '🔒 Executando auditoria de segurança...'
                         sh '''
                             npm audit --audit-level=moderate || true
@@ -118,7 +118,7 @@ spec:
         stage('🏗️ Build') {
             steps {
                 container('node') {
-                    dir('app') {
+                    dir('fiap-dclt-aula01/app') {
                         echo '🏗️ Fazendo build da aplicação...'
                         sh '''
                             echo "Building application..."
@@ -133,7 +133,7 @@ spec:
         stage('🚀 Smoke Test') {
             steps {
                 container('node') {
-                    dir('app') {
+                    dir('fiap-dclt-aula01/app') {
                         echo '🚀 Executando smoke test...'
                         sh '''
                             # Instalar curl (Alpine Linux)

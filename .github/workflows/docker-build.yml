@@ -46,8 +46,8 @@ jobs:
       - name: 🐳 Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: /fiap-dclt-aula03/Dockerfile
+          context: ./fiap-dclt-aula03
+          file: ./fiap-dclt-aula03/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           platforms: linux/amd64

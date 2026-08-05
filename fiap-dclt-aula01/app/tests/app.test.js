@@ -198,8 +198,3 @@ describe('FIAP Todo API', () => {
     });
   });
 });
-describe('Pipeline Error Test', () => {
-  it('should fail to demonstrate error handling', () => {
-    expect(1 + 1).toBe(3); // Vai falhar!
-  });
-});
